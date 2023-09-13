@@ -14,6 +14,16 @@ img := ascii_img.from_file('./red-panda.png',
 }
 println(img)
 ```
+
+## Dependencies
+These can be installed by executing `v install` in the repository root directory.
+> **NOTE**
+> Hardware acceleration is not implemented yet.
+- V's [VSL](https://github.com/vlang/vsl) library for hardware acceleration.
+- [cpuid](https://github.com/islonely/cpuid) for getting CPU information for multithreading.
+
+OpenCL headers are needed for hardware acceleration. These are included for you in the `include/` directory.
+
 ## TODO
 In no particular order:
 - [ ] Add custom color themes.

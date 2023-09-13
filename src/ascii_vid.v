@@ -102,7 +102,7 @@ pub fn Video.new(path string, params VideoParams) !&Video {
 		tmp_dir: $if local_tmp ? {
 			os.abs_path('./tmp/ascii_img/' + os.file_name(p).split('.')[0])
 		} $else {
-			os.temp_dir() + '/ascii_img/' + os.path_separator + os.file_name(p).split('.')[0]
+			os.abs_path(os.temp_dir() + '/ascii_img/' + os.file_name(p).split('.')[0])
 		}
 		frame_format: params.extracted_frame_format
 	}
